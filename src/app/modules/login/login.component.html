@@ -1,0 +1,55 @@
+<div class="card card-outline card-primary">
+    <div class="card-header text-center">
+        <a [routerLink]="['/']" class="h1"><b>Clínica</b>Test</a>
+    </div>
+    <div class="card-body">
+        <p class="login-box-msg">Ingrese las credenciales para iniciar</p>
+        <form [formGroup]="loginForm" (ngSubmit)="loginByAuth()">
+            <div class="input-group mb-3">
+                <input
+                    formControlName="username"
+                    type="text"
+                    class="form-control"
+                    placeholder="Usuario"
+                />
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input
+                    formControlName="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Contraseña"
+                />
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- /.col -->
+                <div class="col-5">
+                    <pf-button
+                        [variant]="'primary'"
+                        [loading]="isAuthLoading"
+                        (click)="loginByAuth()"
+                    >
+                        Ingresar
+                    </pf-button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+        <div class="social-auth-links text-center mb-3">
+        </div>
+        <p class="mb-1">
+            <a [routerLink]="['/forgot-password']">Olvidaste tu contraseña?</a>
+        </p>
+    </div>
+    <!-- /.login-card-body -->
+</div>
