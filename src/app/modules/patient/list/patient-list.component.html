@@ -1,0 +1,9 @@
+<div class="m-20">
+    <h1 class="text-blue-800">Listado de pacientes</h1>
+    <div class="bg-blue-200 w-200">
+        <p *ngFor="let patient of patients">
+            {{patient.firstName}}
+        </p>
+    </div>
+</div>
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>

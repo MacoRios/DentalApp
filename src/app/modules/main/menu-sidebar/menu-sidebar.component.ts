@@ -39,6 +39,11 @@ export const MENU = [
         path: ['/']
     },
     {
+        name: 'Pacientes',
+        iconClasses: 'fas fa-user',
+        path: ['/patient']
+    },
+    {
         name: 'Blank',
         iconClasses: 'fas fa-file',
         path: ['/blank']

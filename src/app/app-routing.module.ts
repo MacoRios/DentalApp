@@ -11,6 +11,7 @@ import {NonAuthGuard} from '@guards/non-auth.guard';
 import {ForgotPasswordComponent} from '@modules/forgot-password/forgot-password.component';
 import {RecoverPasswordComponent} from '@modules/recover-password/recover-password.component';
 import {SubMenuComponent} from '@pages/main-menu/sub-menu/sub-menu.component';
+import { PatientListComponent } from '@modules/patient/list/patient-list.component';
 
 const routes: Routes = [
     {
@@ -38,7 +39,11 @@ const routes: Routes = [
             {
                 path: '',
                 component: DashboardComponent
-            }
+            },
+            {
+                path: 'patient',
+                component: PatientListComponent
+            },
         ]
     },
     {

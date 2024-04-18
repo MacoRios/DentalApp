@@ -36,6 +36,7 @@ import {ProfabricComponentsModule} from '@profabric/angular-components';
 import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search.component';
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import { environment } from 'environments/environment';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -72,6 +73,7 @@ registerLocaleData(localeEn, 'en-EN');
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
+        NgxSpinnerModule,
         ToastrModule.forRoot({
             timeOut: 3000,
             positionClass: 'toast-top-right',
