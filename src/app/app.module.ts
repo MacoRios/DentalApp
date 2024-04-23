@@ -37,6 +37,13 @@ import {SidebarSearchComponent} from './components/sidebar-search/sidebar-search
 import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import { environment } from 'environments/environment';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from "@angular/material/paginator";
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms'; 
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 registerLocaleData(localeEn, 'en-EN');
 
@@ -73,7 +80,8 @@ registerLocaleData(localeEn, 'en-EN');
         AppRoutingModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
-        NgxSpinnerModule,
+        NgxSpinnerModule, MatTableModule,
+        MatPaginatorModule, FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatPaginator, MatButtonToggleModule,
         ToastrModule.forRoot({
             timeOut: 3000,
             positionClass: 'toast-top-right',

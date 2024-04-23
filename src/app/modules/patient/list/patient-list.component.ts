@@ -8,6 +8,8 @@ import { MatPaginator, MatPaginatorModule } from "@angular/material/paginator";
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms'; 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @Component({
     templateUrl: "./patient-list.component.html",
@@ -16,18 +18,17 @@ import {FormsModule} from '@angular/forms';
         CommonModule,
         NgxSpinnerModule,
         MatTableModule,
-        MatPaginatorModule, FormsModule, MatFormFieldModule, MatInputModule
+        MatPaginatorModule, FormsModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonToggleModule,
     ],
     providers: [
         PatientService,
-        NgxSpinnerService, 
-        
+        NgxSpinnerService,
     ]
 })
 
 export class PatientListComponent implements AfterViewInit {
     patients: PatientModel[];
-    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+    displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'actions'];
     dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   
     @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -37,6 +38,19 @@ export class PatientListComponent implements AfterViewInit {
         private readonly _spinnerService: NgxSpinnerService
     ){
         // this.getPatients();
+    }
+
+    // Métodos de acción
+    editarPaciente(paciente: PatientModel) {
+        console.log('funciona paciente')
+    }
+
+    eliminarPaciente(paciente: PatientModel) {
+        console.log('funciona paciente delete')
+    }
+
+    verDetalle(paciente: PatientModel) {
+        console.log('funciona paciente ver')
     }
 
     applyFilter(event: Event) {
