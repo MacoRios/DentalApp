@@ -27,9 +27,50 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 })
 
 export class PatientListComponent implements AfterViewInit {
-    patients: PatientModel[];
+    patients: PatientModel[] = [
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+        {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
+        {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
+        {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
+        {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
+        {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
+      ];
     displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'actions'];
-    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+    dataSource = new MatTableDataSource<PatientModel>(this.patients);
   
     @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -62,57 +103,6 @@ export class PatientListComponent implements AfterViewInit {
       this.dataSource.paginator = this.paginator;
     }
 }
-
-export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
-  }
-  
-  const ELEMENT_DATA: PeriodicElement[] = [
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-    {position: 1, name: 'Ana Daniela Chavéz Camey', weight: 1.0079, symbol: 'H'},
-    {position: 2, name: 'Marco Antonio Ríos Garcia', weight: 4.0026, symbol: 'He'},
-    {position: 3, name: 'Sergio Arturo Ríos Garcia', weight: 6.941, symbol: 'Li'},
-    {position: 4, name: 'Palido', weight: 9.0122, symbol: 'Be'},
-    {position: 5, name: 'Luis Cotoc', weight: 10.811, symbol: 'B'},
-  ];
-  
 
   
 

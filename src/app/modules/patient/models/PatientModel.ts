@@ -1,4 +1,6 @@
 export class PatientModel {
-    firstName: string;
-    lastName: string;
+    name: string;
+    weight: number;
+    position: number;
+    symbol: string;
 }
